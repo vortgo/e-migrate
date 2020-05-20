@@ -1,3 +1,3 @@
-module elastic-migration
+module github.com/vortgo/e-migrate
 
 go 1.14
