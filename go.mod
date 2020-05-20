@@ -1,3 +1,3 @@
-module github.com/vortgo/e-migrate
+module github.com/vortgo/emigrate
 
 go 1.14
