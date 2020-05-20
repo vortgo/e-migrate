@@ -1,0 +1,4 @@
+github.com/elastic/go-elasticsearch/v8 v8.0.0-20200518071748-b24e0d29a173 h1:KX2uAwJpKXcInnXzib5eLq8f9sa6HKNg44oxuR61gDM=
+github.com/elastic/go-elasticsearch/v8 v8.0.0-20200518071748-b24e0d29a173/go.mod h1:xe9a/L2aeOgFKKgrO3ibQTnMdpAeL0GC+5/HpGScSa4=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
