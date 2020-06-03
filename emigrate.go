@@ -72,8 +72,8 @@ func runMigration(es *elasticsearch.Client, templates map[string][]byte) {
 			log.Println(errors.Wrap(err, "Put template error"))
 			log.Println(err)
 		}
-		if response.StatusCode != 200 {
-			log.Println(errors.New("Put template error - 1 "))
+		if response != nil && response.StatusCode != 200 {
+			log.Println(errors.New("Put template error - invalid response"))
 			log.Println(response)
 		}
 	}
