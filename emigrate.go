@@ -8,6 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"io/ioutil"
 	"log"
+	"os"
 	"path/filepath"
 	"strings"
 )
@@ -29,7 +30,6 @@ func main() {
 		Addresses: []string{
 			*elasticUrl,
 		},
-		// ...
 	}
 	es, err = elasticsearch.NewClient(cfg)
 
@@ -41,7 +41,7 @@ func main() {
 
 	files, err := ioutil.ReadDir(*path)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(errors.Wrap(err, "Error while reading dir"))
 	}
 
 	templates := map[string][]byte{}
@@ -75,6 +75,7 @@ func runMigration(es *elasticsearch.Client, templates map[string][]byte) {
 		if response != nil && response.StatusCode != 200 {
 			log.Println(errors.New("Put template error - invalid response"))
 			log.Println(response)
+			os.Exit(1)
 		}
 	}
 }
